@@ -44,8 +44,8 @@ def find_url(name, id):
 
 def write_cache(cache, filename):
     with open(filename, 'w') as f:
-        json.dump(cache, f)
-
+        json.dump(cache, f, indent=4, sort_keys=True, separators=(',', ': '))
+        f.write('\n')
 
 def read_cache(filename):
     try:
