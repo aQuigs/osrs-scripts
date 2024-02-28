@@ -1,8 +1,8 @@
 {
-  "totalObtained": 535,
-  "totalItems": 1671,
-  "uniqueObtained": 479,
-  "uniqueItems": 1488,
+  "totalObtained": 538,
+  "totalItems": 1674,
+  "uniqueObtained": 491,
+  "uniqueItems": 1490,
   "tabs": {
     "Raids": {
       "Tombs of Amascut": {
@@ -25,8 +25,8 @@
           {
             "id": 25985,
             "name": "Elidinis\u0027 ward",
-            "quantity": 0,
-            "obtained": false,
+            "quantity": 1,
+            "obtained": true,
             "sequence": 2
           },
           {
@@ -116,7 +116,7 @@
           {
             "id": 27293,
             "name": "Cache of runes",
-            "quantity": 16,
+            "quantity": 17,
             "obtained": true,
             "sequence": 15
           },
@@ -194,7 +194,7 @@
         "killCounts": [
           {
             "name": "Tombs of Amascut completions",
-            "amount": 36,
+            "amount": 37,
             "sequence": 0
           },
           {
@@ -204,7 +204,7 @@
           },
           {
             "name": "Tombs of Amascut (Expert) completions",
-            "amount": 133,
+            "amount": 137,
             "sequence": 2
           }
         ]
@@ -271,7 +271,7 @@
           {
             "id": 22446,
             "name": "Vial of blood",
-            "quantity": 1161,
+            "quantity": 1541,
             "obtained": true,
             "sequence": 8
           },
@@ -335,7 +335,7 @@
         "killCounts": [
           {
             "name": "Theatre of Blood completions",
-            "amount": 156,
+            "amount": 207,
             "sequence": 0
           },
           {
@@ -426,14 +426,14 @@
           {
             "id": 21034,
             "name": "Dexterous prayer scroll",
-            "quantity": 4,
+            "quantity": 5,
             "obtained": true,
             "sequence": 10
           },
           {
             "id": 21079,
             "name": "Arcane prayer scroll",
-            "quantity": 2,
+            "quantity": 3,
             "obtained": true,
             "sequence": 11
           },
@@ -454,14 +454,14 @@
           {
             "id": 21047,
             "name": "Torn prayer scroll",
-            "quantity": 21,
+            "quantity": 23,
             "obtained": true,
             "sequence": 14
           },
           {
             "id": 21027,
             "name": "Dark relic",
-            "quantity": 30,
+            "quantity": 31,
             "obtained": true,
             "sequence": 15
           },
@@ -518,12 +518,12 @@
         "killCounts": [
           {
             "name": "Chambers of Xeric completions",
-            "amount": 358,
+            "amount": 391,
             "sequence": 0
           },
           {
             "name": "Chambers of Xeric (CM) completions",
-            "amount": 36,
+            "amount": 43,
             "sequence": 1
           }
         ]
@@ -996,8 +996,8 @@
           {
             "id": 26243,
             "name": "Virtus robe top",
-            "quantity": 0,
-            "obtained": false,
+            "quantity": 1,
+            "obtained": true,
             "sequence": 3
           },
           {
@@ -1017,7 +1017,7 @@
           {
             "id": 28268,
             "name": "Blood quartz",
-            "quantity": 5,
+            "quantity": 12,
             "obtained": true,
             "sequence": 6
           },
@@ -1031,22 +1031,22 @@
           {
             "id": 28276,
             "name": "Chromium ingot",
-            "quantity": 1,
+            "quantity": 2,
             "obtained": true,
             "sequence": 8
           },
           {
             "id": 28334,
             "name": "Awakener\u0027s orb",
-            "quantity": 0,
-            "obtained": false,
+            "quantity": 21,
+            "obtained": true,
             "sequence": 9
           }
         ],
         "killCounts": [
           {
             "name": "Vardorvis kills",
-            "amount": 261,
+            "amount": 1110,
             "sequence": 0
           }
         ]
@@ -1146,6 +1146,32 @@
           {
             "name": "Hespori kills",
             "amount": 110,
+            "sequence": 0
+          }
+        ]
+      },
+      "Scurrius": {
+        "isUpdated": false,
+        "items": [
+          {
+            "id": 28801,
+            "name": "Scurry",
+            "quantity": 0,
+            "obtained": false,
+            "sequence": 0
+          },
+          {
+            "id": 28798,
+            "name": "Scurrius\u0027 spine",
+            "quantity": 0,
+            "obtained": false,
+            "sequence": 1
+          }
+        ],
+        "killCounts": [
+          {
+            "name": "Scurrius kills",
+            "amount": 0,
             "sequence": 0
           }
         ]
@@ -7701,7 +7727,7 @@
         "killCounts": [
           {
             "name": "Easy clues completed",
-            "amount": 46,
+            "amount": 47,
             "sequence": 0
           }
         ]
@@ -11639,6 +11665,13 @@
             "quantity": 0,
             "obtained": false,
             "sequence": 55
+          },
+          {
+            "id": 28801,
+            "name": "Scurry",
+            "quantity": 0,
+            "obtained": false,
+            "sequence": 56
           }
         ],
         "killCounts": []
