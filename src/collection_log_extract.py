@@ -1,13 +1,13 @@
 import json
 
-from utils import read_cache, write_cache, get_icon_url
+from icon_cache import IconCache
 
 
 def main(log_input_filename, output_filename, id_cache_filename):
     with open(log_input_filename) as f:
         data = json.load(f)
 
-    id_cache = read_cache(id_cache_filename)
+    id_cache = IconCache(id_cache_filename)
     seen_item_ids = set()
 
     with open(output_filename, 'w') as f:
@@ -20,7 +20,7 @@ def main(log_input_filename, output_filename, id_cache_filename):
 
                 boss_log = tab_data[boss]['items']
                 for item_data in boss_log:
-                    img_url = get_icon_url(id_cache, item_data['name'], str(item_data['id']))
+                    img_url = id_cache.get(item_data['name'], str(item_data['id']))
                     f.write(
                         f"{item_data['name']},"
                         f"{tab},"
@@ -32,8 +32,6 @@ def main(log_input_filename, output_filename, id_cache_filename):
                         f"{item_data['id'] in seen_item_ids}\n"
                     )
                     seen_item_ids.add(item_data['id'])
-
-                write_cache(id_cache, id_cache_filename)
 
 
 if __name__ == '__main__':

@@ -15,14 +15,19 @@ ICON_OVERRIDES = {
 }
 
 
-def get_icon_url(cache, name, id):
-    if id not in cache:
-        cache[id] = find_url(name, id)
+class IconCache:
+    def __init__(self, filename):
+        self.cache = self._read_cache(filename)
+        self.filename = filename
 
-    return cache[id]
+    def get(self, name, id):
+        if id not in self.cache:
+            self.cache[id] = self._find_url(name, id)
+            self._flush()
 
+        return self.cache[id]
 
-def find_url(name, id):
+    def _find_url(self, name, id):
         icon_id = ICON_OVERRIDES.get(id, id)
         search_url=f"{WIKI_URL_BASE}{LOOKUP_SUFFIX}?type=item&id={icon_id}&name={url_encode(name)}"
 
@@ -41,15 +46,15 @@ def find_url(name, id):
 
         return WIKI_URL_BASE + img_src
 
+    def _flush(self):
+        with open(self.filename, 'w') as f:
+            json.dump(self.cache, f, indent=4, sort_keys=True, separators=(',', ': '))
+            f.write('\n')
 
-def write_cache(cache, filename):
-    with open(filename, 'w') as f:
-        json.dump(cache, f, indent=4, sort_keys=True, separators=(',', ': '))
-        f.write('\n')
-
-def read_cache(filename):
-    try:
-        with open(filename) as f:
-            return json.load(f)
-    except:
-        return {}
+    @staticmethod
+    def _read_cache(filename):
+        try:
+            with open(filename) as f:
+                return json.load(f)
+        except:
+            return {}
