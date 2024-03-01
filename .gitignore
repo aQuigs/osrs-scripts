@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/osx,vim,zsh,java,node,python
-# Edit at https://www.toptal.com/developers/gitignore?templates=osx,vim,zsh,java,node,python
+# Created by https://www.toptal.com/developers/gitignore/api/osx,vim,zsh,java,node,python,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=osx,vim,zsh,java,node,python,visualstudiocode
 
 ### Java ###
 # Compiled class file
@@ -385,6 +385,25 @@ tags
 # Persistent undo
 [._]*.un~
 
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
 ### Zsh ###
 # Zsh compiled script + zrecompile backup
 *.zwc
@@ -420,5 +439,5 @@ zsdoc/data
 /tests/_output/*
 !/tests/_output/.gitkeep
 
-# End of https://www.toptal.com/developers/gitignore/api/osx,vim,zsh,java,node,python
+# End of https://www.toptal.com/developers/gitignore/api/osx,vim,zsh,java,node,python,visualstudiocode
 
