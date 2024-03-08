@@ -20,16 +20,20 @@ class IconCache:
         self.cache = self._read_cache(filename)
         self.filename = filename
 
-    def get(self, name, id):
-        if id not in self.cache:
-            self.cache[id] = self._find_url(name, id)
+    def get(self, name, id=None):
+        cache_key = id if id else name.lower()
+        if cache_key not in self.cache:
+            self.cache[cache_key] = self._find_url(name, id)
             self._flush()
 
-        return self.cache[id]
+        return self.cache[cache_key]
 
-    def _find_url(self, name, id):
+    def _find_url(self, name, id=None):
         icon_id = ICON_OVERRIDES.get(id, id)
-        search_url=f"{WIKI_URL_BASE}{LOOKUP_SUFFIX}?type=item&id={icon_id}&name={url_encode(name)}"
+        search_url=f"{WIKI_URL_BASE}{LOOKUP_SUFFIX}?type=item&name={url_encode(name)}"
+
+        if id:
+            search_url += f"&id={icon_id}"
 
         print(f"Finding icon for {name=} {id=} {icon_id=}..")
 
